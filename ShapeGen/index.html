@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- TODO: Update description and author list with your project details -->
+    <meta name="description"
+          content="ShapeGen project page">
+    <meta name="author" content="Your Name,
+                                 Collaborator 1,
+                                 Collaborator 2">
+
+    <!-- TODO: Replace with your project title -->
+    <title>ShapeGen</title>
+    <!-- Bootstrap core CSS -->
+    <!--link href="bootstrap.min.css" rel="stylesheet"-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="offcanvas.css" rel="stylesheet">
+    <!--    <link rel="icon" href="img/favicon.gif" type="image/gif">-->
+</head>
+
+<body>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container"></div>
+    <!-- TODO: Replace with your project title -->
+    <h2>ShapeGen: Robotic Data Generation for Category-Level Manipulation</h2>
+    <!-- <h3>[Conference/Venue]</h3> -->
+    <hr>
+    <p>
+        <!-- INSTRUCTIONS for Authors:
+             1. Keep author names you want to link to as <a> tags (usually links to personal homepage or Google Scholar)
+             2. Remove links for authors you don't have homepage for (just use plain text)
+             3. Add superscript numbers <sup>1</sup>, <sup>2</sup> for affiliations
+             4. Use &#8224; for "corresponding author" indicator (optional)
+        -->
+        <span style="white-space: nowrap; font-size:larger">
+        <!-- TODO: Update with your author information. Example:
+        <a href="https://yourwebsite.com/">Your Name</a><sup>1</sup>&nbsp;&nbsp;
+        Collaborator Name<sup>1</sup>&nbsp;&nbsp;
+        <a href="https://collaborator.github.io/">Collaborator 2</a><sup>2</sup>&nbsp;&nbsp;
+        -->
+        <a href="https://wangyr22.github.io/">Yirui Wang</a>&nbsp;&nbsp;
+        <a href="https://xuxw98.github.io/">Xiuwei Xu</a>&nbsp;&nbsp;
+        <a href="https://github.com/ponymaay">Angyuan Ma</a>&nbsp;&nbsp;
+        Bingyao Yu&nbsp;&nbsp;
+        <a href="https://scholar.google.com/citations?user=6a79aPwAAAAJ&hl=en&authuser=1">Jie Zhou</a>&nbsp;&nbsp;
+        <a href="http://ivg.au.tsinghua.edu.cn/Jiwen_Lu/">Jiwen Lu</a>&nbsp;&nbsp;
+
+        </span>
+        <br><br>
+        Tsinghua University
+        <br><br>
+        <a href="https://arxiv.org/abs/YOUR_ARXIV_ID" target="_blank" style="color: #1E90FF;">
+            <img src="https://img.icons8.com/material-outlined/24/000000/file.png" alt="paper" style="vertical-align: middle;">
+            &nbsp;Paper (arXiv)
+        </a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- GitHub link disabled - coming soon -->
+        <span style="color: #999; font-style: italic;">
+            <img src="https://img.icons8.com/material-outlined/24/000000/github.png" alt="code" style="vertical-align: middle;">
+            &nbsp;Code (Coming Soon)
+        </span>&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- Optional: Add more links as needed (video, demo, blog post, etc.) -->
+    </p>
+
+    <!-- <div class="btn-group" role="group" aria-label="Top menu">
+        <a class="btn btn-primary" href="https://arxiv.org/abs/2006.09661">Paper</a>
+        <a class="btn btn-primary" href="https://colab.research.google.com/github/vsitzmann/siren/blob/master/explore_siren.ipynb">Colab Notebook</a>
+        <a class="btn btn-primary" href="https://dcato98.github.io/playground/#activation=sine">Tensorflow Playground</a>
+        <a class="btn btn-primary" href="https://github.com/vsitzmann/siren">Code</a>
+        <a class="btn btn-primary" href="https://drive.google.com/drive/u/1/folders/1_iq__37-hw7FJOEUK1tX7mdp8SKB368K">Data</a>
+    </div> -->
+</div>
+
+<div class="container">
+
+    <div class="section">
+        <h2>Video Demo</h2>
+        <hr>
+        <div class="vcontainer">
+            <video class="video" width="100%" controls muted playsinline>
+                <source src="img/shapegen-demo-white.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Abstract</h2>
+        <hr>
+        <div class="row align-items-center">
+            <div class="col justify-content-center text-center">
+                <img src="img/teaser.png" alt="project overview" width="100%">
+            </div>
+        </div>
+        <p>
+    <br>Manipulation policies deployed in uncontrolled real-world scenarios are faced with great in-category geometric diversity of everyday objects. In order to function robustly under such variations, policies need to work in a category-level manner, i.e. knowing how to interact with any object in a certain category, instead of only a specific one seen during training. This in-category generalizability is usually nurtured with shape-diversified training data;
+    however, manually collecting such a corpus of data is infeasible due to the requirement of intense human labor and large collections of divergent objects at hand. In this paper, we propose ShapeGen, a data generation method that aims at generating shape-variated manipulation data in a simulator-free and 3D manner. ShapeGen decomposes the process into two stages: Shape Library curation and Function-Aware Generation. In the first stage, we train spatial warpings between shapes mapping points to points that correspond functionally, and aggregate 3D models along with the warpings into a plug-and-play Shape Library. In the second stage, we design a pipeline that, leveraging established Libraries, requires only minimal human annotation to generate physically plausible and functionally correct novel demonstrations. Experiments in the real world demonstrate the effectiveness of ShapeGen to boost policies' in-category shape generalizability.
+        </p>
+
+    </div>
+
+    <div class="section">
+        <h2>Method</h2>
+        <hr>
+        <div class="row align-items-center">
+            <div class="col justify-content-center text-center">
+                <img src="img/shape-library.png" alt="shape library pipeline" width="90%">
+            </div>
+        </div>
+        <p>
+            <br><b>Shape Library Curation.</b> To generate data, ShapeGen first curate a Shape Library for each relevant category of object that contains not only 3D shapes, but also spatial warpings to them from a common template shape.
+        </p>
+        
+        <div class="row align-items-center">
+            <div class="col justify-content-center text-center">
+                <img src="img/generation.png" alt="data generation pipeline" width="90%">
+            </div>
+        </div>
+        <p>
+            <br><b>Function-Aware Generation.</b>  Given a sequence of raw observation-action pairs, we ask an annotator to recognize keypoints on the actual objects used, designate methods for inter-shape alignment, then uses the established Shape Library to automatically calculate optimal alignment and correct action.
+        </p>
+
+    </div>
+
+    <div class="section">
+        <h2>Shape Library Correspondences</h2>
+        <hr>
+        <div class="row align-items-center">
+            <div class="col justify-content-center text-center">
+                <img src="img/vis-library-new.png" alt="shape library visualization" width="90%">
+            </div>
+        </div>
+        <p>
+            <br><b>Visualization of Shape Libraries.</b> Visualizations of categories kettle, mug, hammer and scissors are provided. In each category, points of the same color are mapped from a same point on the common template shape.
+        </p>
+    </div>
+    
+    <div class="section">
+            <h2>Comparison with Feature Matching</h2>
+            <hr>
+            <div class="row align-items-center">
+                <div class="col justify-content-center text-center">
+                    <img src="img/compare-dino-emoji.png" alt="comparison with feature matching" width="90%">
+                </div>
+            </div>
+        <p>
+            <br><b>Qualitative comparison with feature-matching method.</b> Feature-matching is prone to imprecise single-point matches; examples are highlighted with red arrows. Corresponding points are marked with the same color.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Function-Aware Data Generation</h2>
+        <hr>
+        <div class="vcontainer">
+            <video class="video" width="50%" controls muted playsinline>
+                <source src="img/function-aware_generation.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Generated Demos</h2>
+        <hr>
+        <div class="vcontainer">
+            <video class="video" width="50%" controls muted playsinline>
+                <source src="img/generated-demos.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Bibtex</h2>
+        <hr>
+        <div class="bibtexsection">
+TODO
+        </div>
+    </div>
+    </div>
+
+    <hr>
+</div>
+
+    <p><center>      
+        <br>
+        &copy; Yirui Wang | Last update: Apr. 14, 2026
+    </center></p>
+
+</body>
+</html>
